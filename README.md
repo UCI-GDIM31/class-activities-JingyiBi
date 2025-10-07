@@ -4,7 +4,10 @@
 Hello World!
 
 ### W2
-Create future Devlog sub-headers with the three # symbols, then write your Devlogs below them.
+The r, g, and b variables are floats because color values usually need decimals to show smooth changes between shades. Using floats lets the colors blend more naturally instead of jumping between whole numbers.
+
+The _bounce variable is an int because it just counts how many times something bounces. Since that’s always a whole number, int is the right choice.
+No error.
 
 ## Open-Source Assets
 ### W1
