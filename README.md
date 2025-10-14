@@ -16,6 +16,10 @@ The input will include float x and float y. Float x refers to the moment when pl
 Input: float x (touch time); float y (leave time)
 Output type: boolean
 
+Class is a family recipe for how to make and present a dish that has been passed down through different generations. Components are the printed version of the recipe in a cookbook. Method is the cooking steps for this dish. Member variables are the ingredients of this dish.
+
+The balls get brighter every time they bounce. After many bounces, this brightness adds up and eventually maxes out, turning them completely white. That's why they look extremely bright in the Scene.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
