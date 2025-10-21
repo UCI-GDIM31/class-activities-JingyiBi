@@ -38,6 +38,9 @@ Translate() is a method.
 This line calls the method Translate() on transform.
 The method parameters are (0, 0, translation).
 It moves the object forward or backward along the Z-axis.
+
+For the collider activity, I added Rigidbody components to the Cat and the SoccerBall because both of them need to move and react to physics. The Cat should be able to kick the ball, and the ball should bounce when it hits other objects. I didn’t add a Rigidbody to the Goal, since it stays in place.I checked Is Trigger only on the Goal collider. That way, the ball can pass through the goal while still letting the game detect when it scored.
+When I tested my game the first time, it didn’t work perfectly—the ball went through the floor! I realized I forgot to add a collider to the ground. After I added a BoxCollider to the ground and adjusted the sizes of the other colliders, everything started working correctly.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
