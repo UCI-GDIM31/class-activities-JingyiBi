@@ -20,6 +20,24 @@ Class is a family recipe for how to make and present a dish that has been passed
 
 The balls get brighter every time they bounce. After many bounces, this brightness adds up and eventually maxes out, turning them completely white. That's why they look extremely bright in the Scene.
 
+### W4
+table 5
+line5 
+ _moveSpeed is a member variable, and the type is float.
+This line sets the initial value of _moveSpeed to 1.0f.
+The [SerializeField] attribute allows the variable to be edited in the Unity Inspector even though it’s private.
+line22
+translation is a local variable, and the type is float.
+This line is calling a method: Input.GetAxis("Vertical").
+The method parameter is "Vertical".
+_moveSpeed is a member variable, and the type is float.
+Time.deltaTime keeps the movement smooth and consistent across frames.
+line25
+transform is a Component.
+Translate() is a method.
+This line calls the method Translate() on transform.
+The method parameters are (0, 0, translation).
+It moves the object forward or backward along the Z-axis.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
