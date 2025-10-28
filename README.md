@@ -41,6 +41,28 @@ It moves the object forward or backward along the Z-axis.
 
 For the collider activity, I added Rigidbody components to the Cat and the SoccerBall because both of them need to move and react to physics. The Cat should be able to kick the ball, and the ball should bounce when it hits other objects. I didn’t add a Rigidbody to the Goal, since it stays in place.I checked Is Trigger only on the Goal collider. That way, the ball can pass through the goal while still letting the game detect when it scored.
 When I tested my game the first time, it didn’t work perfectly—the ball went through the floor! I realized I forgot to add a collider to the ground. After I added a BoxCollider to the ground and adjusted the sizes of the other colliders, everything started working correctly.
+### W5
+Question:
+What direction does Vector3.forward point to? Is it related to the camera’s direction?
+Answer:
+Vector3.forward points along the positive Z-axis in Unity’s world space.
+It is not directly related to the camera’s direction — it just means “forward” in global coordinates (0, 0, 1).
+However, if you use transform.forward, then it refers to the object’s local forward direction, which can change depending on how the object is rotated.
+
+DeerW5:
+1. add component DeerW5 to the inspector of gameObject Deer
+2. define float variables for deer's speed that can be shown and changed in unity
+3. an Update() method, deer will move every frame after the game starts
+4. use transform.translate to change direction
+5. use GetComponent<> to find NavMeshAgent
+6. use Collision() method to make Deer stop when it touch the target object
+7. add collision and rigidbody to mushroom-red
+
+Renew:(written after coding)
+1. set target and drag red mushroom to target, member variable target with type Transform
+2. use Update() and GetCOmponent<> to locate and use NavMeshAgent component
+3. use unity method setdestination() to set target as the destination.
+
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
