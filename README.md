@@ -57,11 +57,25 @@ DeerW5:
 5. use GetComponent<> to find NavMeshAgent
 6. use Collision() method to make Deer stop when it touch the target object
 7. add collision and rigidbody to mushroom-red
-
 Renew:(written after coding)
 1. set target and drag red mushroom to target, member variable target with type Transform
 2. use Update() and GetCOmponent<> to locate and use NavMeshAgent component
 3. use unity method setdestination() to set target as the destination.
+
+### W6
+https://docs.google.com/document/d/1exNqQE_zGuOoztND9FT3ldDwkXjJ6m8a8oRDWERaMyg/edit?tab=t.0
+part4,5
+
+Q1:What member variables does this class need?
+public float speed,private bool _isChasing,private Transform _player
+Q2:What methods does this class need? Should it be something that Unity provides (like Start(), Update(), or a collision method), or one you write?
+StartChasing,StopChasing,Update
+Q3:What should the method(s) do?
+StartChasing(): Makes the bat start moving.
+StopChasing(): Makes the bat stop moving.
+Update(): If _isChasing == true, the bat moves toward the Cat’s position.
+
+
 
 ## Open-Source Assets
 ### W1
