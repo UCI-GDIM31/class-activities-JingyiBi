@@ -63,24 +63,7 @@ public class BatManager : MonoBehaviour
         //      IF the distance is less than _interactDistance, 
         //          make the bat chase the player;
         //          otherwise, make the bat STOP chasing the player.
-        for (int i = 0; i < _bats.Length; i++)
-        {
-            float distance = Vector3.Distance(_bats[i].transform.position, transform.position);
-            if (distance < _interactDistance)
-            {
-                _bats[i].EnableChase(_playerTransform);
 
-            }
-            else
-            {
-
-                _bats[i].DisableChase();
-
-                if (distance < _overlapDistance)
-
-                    CreateReactions(_bats[i]);
-            }
-        }
 
         // You will need to check the Vector3 documentation to find a method
         //      to help you with that distance check :)
@@ -90,7 +73,34 @@ public class BatManager : MonoBehaviour
         // Also inside this for loop, if the distance between the bat and the
         //      player is less than _overlapDistance, call CreateReactions()
         //      and pass the bat in as an argument.
-        
+        for (int i = 0; i < _bats.Length; i++)
+        {
+            BatW6 bat = _bats[i];
+            float betweenDistance = Vector3.Distance(bat.transform.position, _playerTransform.position);
+            if (betweenDistance < _interactDistance)
+            {
+                BatW6 batW6 = gameObject.GetComponent<BatW6>();
+                if (batW6 != null)
+                {
+                   _bats[i].EnableChase(_playerTransform);
+                }
+            }
+
+            else
+            {
+                BatW6 batW6 = gameObject.GetComponent<BatW6>();
+                if (batW6 != null)
+                {
+                    _bats[i].DisableChase();
+                }
+
+            }
+
+            if (betweenDistance < _overlapDistance)
+            {
+                CreateReactions(bat);
+            }
+        }
         
 
 
