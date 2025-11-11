@@ -82,7 +82,7 @@ public class BatManager : MonoBehaviour
                 BatW6 batW6 = gameObject.GetComponent<BatW6>();
                 if (batW6 != null)
                 {
-                   _bats[i].EnableChase(_playerTransform);
+                   bat.EnableChase(_playerTransform);
                 }
             }
 
@@ -91,7 +91,7 @@ public class BatManager : MonoBehaviour
                 BatW6 batW6 = gameObject.GetComponent<BatW6>();
                 if (batW6 != null)
                 {
-                    _bats[i].DisableChase();
+                    bat.DisableChase();
                 }
 
             }

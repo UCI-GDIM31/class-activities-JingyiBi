@@ -1,32 +1,28 @@
 using UnityEngine;
 
-// Write the BatW6 class here.
+// make students write entire class >:3
 public class BatW6 : MonoBehaviour
 {
-    [SerializeField] private float _speed = 3f;
-    private bool _isChasing = false;
+    [SerializeField] private float _speed;
     private Transform _playerTransform;
 
     public void EnableChase(Transform player)
     {
+        enabled = true;
         _playerTransform = player;
-        _isChasing = true;
     }
 
     public void DisableChase()
     {
-        _isChasing = false;
+        enabled = false;
     }
 
     private void Update()
     {
-        if (_isChasing && _playerTransform != null)
-        {
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                _playerTransform.position,
-                _speed * Time.deltaTime
-            );
-        }
+        transform.position = Vector3.MoveTowards(
+            transform.position,
+            _playerTransform.position,
+            _speed * Time.deltaTime
+        );
     }
 }
