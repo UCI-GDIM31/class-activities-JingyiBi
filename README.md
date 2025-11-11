@@ -74,7 +74,9 @@ Q3:What should the method(s) do?
 StartChasing(): Makes the bat start moving.
 StopChasing(): Makes the bat stop moving.
 Update(): If _isChasing == true, the bat moves toward the Cat’s position.
-
+### W7
+https://docs.google.com/document/d/1TsVke4FYWiPQJM1o9TWKmZdGuEjed6uXTYwZxrXfC3I/edit?tab=t.0
+animation, UI
 
 
 ## Open-Source Assets
