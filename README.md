@@ -78,6 +78,10 @@ Update(): If _isChasing == true, the bat moves toward the Cat’s position.
 https://docs.google.com/document/d/1TsVke4FYWiPQJM1o9TWKmZdGuEjed6uXTYwZxrXfC3I/edit?tab=t.0
 animation, UI
 
+PLAN:
+When the Muskrat is on the ground, its movement and rotation follow the world coordinate system， where “up” always means world up. However, once the Muskrat jumps onto a bubble, its coordinate system changes. The local “up” direction becomes the direction that points perpendicularly outward from the surface of the bubble, rather than the world’s vertical axis. In other words, the Muskrat’s local orientation now depends on the bubble’s surface normal, not the world’s flat ground. This allows the Muskrat to walk correctly around the curved bubble surface, maintaining its balance and direction relative to the bubble, rather than the world.
+
+Step 2 problem: It uses local y-axis to control the change of the rat in a based world coordination system. The two vector3.up are under different circumstances. You have to use the transformdirection method to change vector from world scale to local scale.
 
 ## Open-Source Assets
 ### W1
